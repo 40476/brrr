@@ -1,20 +1,8 @@
 window.addEventListener("load", async function() {
   // wait for the window to load
   
-  const { authed: isAuthed } = await (await fetch("/api/isAuthed")).json();
 
-  if (!isAuthed) {
-    const login = document.createElement("div");
-    login.classList.add("prePlayContainer");
-    
-    const loginText = document.createElement("p");
-    loginText.innerHTML = "You must be logged in to use Cursor Hangout. Please login to continue."
-
-    const authScript = document.createElement("script");
-    authScript.setAttribute("authed", "location.reload()");
-    authScript.src = "https://auth.util.repl.co/script.js";
-
-    login.append(loginText, authScript)
+  if (false) {
     
     document.body.append(login);
   } else {
