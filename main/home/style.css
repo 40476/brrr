@@ -1,0 +1,128 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: #121212;
+  color: #ffffff;
+
+  margin: 0;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body[data-playing] {
+  cursor: none;
+}
+
+.colorOption {
+  display: inline-block;
+  margin: 15px 10px;
+
+  transition: transform 0.5s;
+}
+
+.colorOption:hover {
+  transform: scale(1.1);
+}
+
+.colorInput {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  width: 50px;
+  height: 50px;
+
+  border: 3px solid #000000;
+  
+  border-radius: 15px;
+  
+  margin: 0;
+}
+
+.colorInput, .colorInput + label {
+  display: block;
+  margin: 0 auto;
+
+  cursor: pointer;
+}
+
+.colorInput + label {
+  margin-top: 7px;
+  text-align: center;
+}
+
+.colorInput {
+  transition: border 0.5s, border-radius 0.5s;
+}
+
+.colorInput:checked {
+  border: 5px solid #0000d6;
+  border-radius: 50%;
+}
+
+.colorSelect {
+  text-align: center;
+  padding: 20px;
+}
+
+.colorOptions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.colorOptions + button {
+  display: block;
+  margin: 10px auto;
+}
+
+.prePlayContainer {
+  text-align: center;
+  padding: 15px 25px;
+}
+
+.prePlayContainer > .replit-auth-button {
+  margin-bottom: 1em;
+}
+
+.char {
+  position: fixed;
+  min-width: 32px;
+  height: 32px;
+  border-radius: 50vmax;
+}
+
+.char p {
+  position: relative;
+  top: -12px;
+  color: white;
+}
+
+#self {
+  background-color: rgba(71,102,255,0.75);
+}
+
+.other {
+  background-color: rgba(255,71,71,0.75);
+  background-size: contain;
+}
+
+.me .plrUsername {
+  font-weight: bold;
+}
+
+.plrUsername {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -25px);
+
+  white-space: nowrap;
+  
+  pointer-events: none;
+}
