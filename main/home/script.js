@@ -1,10 +1,9 @@
 window.addEventListener("load", async function() {
   // wait for the window to load
   
-
+// var username=prompt('s')
   if (false) {
-    
-    document.body.append(login);
+
   } else {
     const colorSelect = document.createElement("div");
     colorSelect.classList.add("colorSelect");
